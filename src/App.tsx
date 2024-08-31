@@ -2,9 +2,13 @@ import "./App.css";
 import Header from "./components/Header";
 import Maps from "./components/Maps";
 import NavbarComponent from "./components/Navbar";
-import House from "./components/House";
 import FooterComponent from "./components/Footer";
 import FeedBack from "./components/Feedback";
+import House2 from "./components/House2";
+import { Houses } from "./db";
+import TimelineComponent from "./components/Timeline";
+import Plan from "./components/Plan";
+import Credit from "./components/Credit";
 
 function App() {
     return (
@@ -15,61 +19,28 @@ function App() {
                     <Header />
                 </header>
                 <main className="flex-grow">
-                    <div id="about">О проекте</div>
-                    <div id="map">
+                    <div id="about" className="pt-16">О проекте</div>
+                    <div id="timeline" className="mx-12 pt-16">
+                        <TimelineComponent />
+                    </div>
+                    <div id="map" className="pt-16">
                         <Maps />
                     </div>
-                    <div id="plan">ген план</div>
-                    <div id="gloria">
-                        <House
-                            name="Gloria"
-                            images={[
-                                "/images/gloria/1.jpg",
-                                "/images/gloria/2.jpg",
-                                "/images/gloria/3.jpg",
-                                "/images/gloria/4.jpg",
-                                "/images/gloria/5.jpg",
-                                "/images/gloria/6.jpg",
-                            ]}
-                            description="описание"
-                            planImg="/images/gloria/plan.jpg"
-                            plan="Текст плана"
-                        />
+                    <div id="plan" className="pt-16">
+                        <Plan />
                     </div>
-                    <div id="katalina">
-                        <House
-                            name="Katalina"
-                            images={[
-                                "/images/katalina/1.jpg",
-                                "/images/katalina/2.jpg",
-                                "/images/katalina/3.jpg",
-                                "/images/katalina/4.jpg",
-                                "/images/katalina/5.jpg",
-                                "/images/katalina/6.jpg",
-                            ]}
-                            description="описание"
-                            planImg="/images/katalina/plan.jpg"
-                            plan="Текст плана"
-                        />
+                    <div id="houses" className="flex md:flex-row flex-col md:space-y-0 space-y-4 md:space-x-8 mx-8 pt-16">
+                        {Houses.map((house) => (
+                            <div className="md:basis-1/3" key={house.name}>
+                                <House2 {...house} />
+                            </div>
+                        ))}
                     </div>
-                    <div id="maria">
-                        <House
-                            name="Maria"
-                            images={[
-                                "/images/maria/1.jpg",
-                                "/images/maria/2.jpg",
-                                "/images/maria/3.jpg",
-                                "/images/maria/4.jpg",
-                                "/images/maria/5.jpg",
-                                "/images/maria/6.jpg",
-                            ]}
-                            description="описание"
-                            planImg="/images/maria/plan.jpg"
-                            plan="Текст плана"
-                        />
+
+                    <div id="credit" className="pt-16">
+                        <Credit />
                     </div>
-                    <div id="credit">кредитование</div>
-                    <div id="feedback">
+                    <div id="feedback" className="pt-16">
                         <FeedBack />
                     </div>
                 </main>

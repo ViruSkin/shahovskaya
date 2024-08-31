@@ -1,3 +1,21 @@
 html {
     scroll-behavior: smooth;
 }
+
+.icon-container {
+    @apply inline-block transition-all duration-300;
+}
+
+.icon-container img {
+    @apply transition-all duration-300;
+}
+
+@media (min-width: 768px) {
+    .icon-container img {
+        filter: grayscale(100%);
+    }
+
+    .icon-container img:hover {
+        @apply filter grayscale-0;
+    }
+}

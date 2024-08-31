@@ -10,13 +10,13 @@ const FeedBack = () => {
                         <div className="mb-2 block">
                             <Label htmlFor="name" value="Ваше имя" />
                         </div>
-                        <TextInput id="name" type="email" placeholder="Мария" required />
+                        <TextInput id="name" type="email" placeholder="Иван Васильевич" />
                     </div>
                     <div>
                         <div className="mb-2 block">
                             <Label htmlFor="phone" value="Номер телефона" />
                         </div>
-                        <TextInput id="phone" type="text" required />
+                        <TextInput id="phone" type="text"  placeholder="+79991234567" required />
                     </div>
                     <div className="flex items-center gap-2">
                         <Checkbox id="remember" />
