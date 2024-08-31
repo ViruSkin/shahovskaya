@@ -1,29 +1,29 @@
-import { Button, Timeline } from "flowbite-react";
+import {  Timeline } from "flowbite-react";
 import { useEffect, useState } from "react";
-import { HiArrowNarrowRight, HiCalendar } from "react-icons/hi";
+import {  HiCalendar } from "react-icons/hi";
 
 const TimelineComponent = () => {
     const [isHorizontal, setIsHorizontal] = useState(false);
 
     // Функция для изменения ориентации в зависимости от ширины экрана
     const handleResize = () => {
-      if (window.innerWidth >= 768) {
-        // Если экран больше или равен 768px, устанавливаем горизонтальную ориентацию
-        setIsHorizontal(true);
-      } else {
-        // Если экран меньше 768px, устанавливаем вертикальную ориентацию
-        setIsHorizontal(false);
-      }
+        if (window.innerWidth >= 768) {
+            // Если экран больше или равен 768px, устанавливаем горизонтальную ориентацию
+            setIsHorizontal(true);
+        } else {
+            // Если экран меньше 768px, устанавливаем вертикальную ориентацию
+            setIsHorizontal(false);
+        }
     };
-  
+
     useEffect(() => {
-      // Устанавливаем начальное значение ориентации
-      handleResize();
-      // Добавляем слушатель события для изменения размера окна
-      window.addEventListener("resize", handleResize);
-  
-      // Убираем слушатель при размонтировании компонента
-      return () => window.removeEventListener("resize", handleResize);
+        // Устанавливаем начальное значение ориентации
+        handleResize();
+        // Добавляем слушатель события для изменения размера окна
+        window.addEventListener("resize", handleResize);
+
+        // Убираем слушатель при размонтировании компонента
+        return () => window.removeEventListener("resize", handleResize);
     }, []);
     return (
         <Timeline horizontal={isHorizontal}>
@@ -31,25 +31,27 @@ const TimelineComponent = () => {
                 <Timeline.Point icon={HiCalendar} />
                 <Timeline.Content>
                     <Timeline.Time>1 Сентября 2024</Timeline.Time>
-                    <Timeline.Title>Application UI code in Tailwind CSS</Timeline.Title>
+                    <Timeline.Title>Подготовка и проектирование</Timeline.Title>
                     <Timeline.Body>
-                        Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and
-                        pre-order E-commerce & Marketing pages.
+                        <ul className="list-disc pl-5">
+                            <li>Разработка генерального плана поселка и архитектурных проектов.</li>
+                            <li>Проведение геодезических и инженерных изысканий.</li>
+                            <li>Подготовка земельных участков и проведение коммуникаций.</li>
+                        </ul>
                     </Timeline.Body>
-                    <Button color="gray">
-                        Learn More
-                        <HiArrowNarrowRight className="ml-2 h-3 w-3" />
-                    </Button>
                 </Timeline.Content>
             </Timeline.Item>
             <Timeline.Item>
                 <Timeline.Point icon={HiCalendar} />
                 <Timeline.Content>
                     <Timeline.Time>31 декабря 2024</Timeline.Time>
-                    <Timeline.Title>Marketing UI design in Figma</Timeline.Title>
+                    <Timeline.Title>Начало строительства и инфраструктура</Timeline.Title>
                     <Timeline.Body>
-                        All of the pages and components are first designed in Figma and we keep a parity between the two
-                        versions even as we update the project.
+                        <ul className="list-disc pl-5">
+                            <li>Строительство въездной группы, КПП и первой очереди коттеджей.</li>
+                            <li>Обустройство внутренних дорог и инженерных сетей.</li>
+                            <li>Возведение детских и спортивных площадок.</li>
+                        </ul>
                     </Timeline.Body>
                 </Timeline.Content>
             </Timeline.Item>
@@ -57,9 +59,13 @@ const TimelineComponent = () => {
                 <Timeline.Point icon={HiCalendar} />
                 <Timeline.Content>
                     <Timeline.Time>1 Июня 2025</Timeline.Time>
-                    <Timeline.Title>E-Commerce UI code in Tailwind CSS</Timeline.Title>
+                    <Timeline.Title>Основное строительство и благоустройство</Timeline.Title>
                     <Timeline.Body>
-                        Get started with dozens of web components and interactive elements built on top of Tailwind CSS.
+                        <ul className="list-disc pl-5">
+                            <li>Строительство второй очереди коттеджей и общественных зон.</li>
+                            <li>Завершение ландшафтных работ и озеленения территории.</li>
+                            <li>Установка освещения и систем безопасности.</li>
+                        </ul>
                     </Timeline.Body>
                 </Timeline.Content>
             </Timeline.Item>
@@ -67,9 +73,13 @@ const TimelineComponent = () => {
                 <Timeline.Point icon={HiCalendar} />
                 <Timeline.Content>
                     <Timeline.Time>31 декабря 2025</Timeline.Time>
-                    <Timeline.Title>E-Commerce UI code in Tailwind CSS</Timeline.Title>
+                    <Timeline.Title>Завершение строительства и ввод в эксплуатацию</Timeline.Title>
                     <Timeline.Body>
-                        Get started with dozens of web components and interactive elements built on top of Tailwind CSS.
+                        <ul className="list-disc pl-5">
+                            <li>Завершение строительства всех коттеджей и инфраструктурных объектов.</li>
+                            <li>Ввод объектов в эксплуатацию и оформление документов.</li>
+                            <li>Заселение жителей и начало эксплуатации поселка.</li>
+                        </ul>{" "}
                     </Timeline.Body>
                 </Timeline.Content>
             </Timeline.Item>

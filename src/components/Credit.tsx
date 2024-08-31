@@ -18,25 +18,37 @@ const Credit = () => {
                     адрес
                 </div>
             </div>
-            <div className="flex flex-col h-auto space-y-4 justify-center items-center mt-4 icon-container md:flex-row md:space-y-0 md:space-x-12 md:h-32">
-                <a href="https://domclick.ru/">
-                    <img src="/images/banks/Domclick_logo.svg" alt="Domclick" className="w-full h-auto" />
-                </a>
-                <a href="https://www.vtb.ru/">
-                    <img src="/images/banks/VTB_Logo_2018.svg" alt="VTB" className="w-full h-auto" />
-                </a>
-                <a href="https://дом.рф/">
-                    <img src="/images/banks/domrf.svg" alt="Дом.РФ" className="w-full h-auto" />
-                </a>
-                <a href="https://www.centrinvest.ru/">
-                    <img src="/images/banks/bank_center_invest.svg" alt="Центр-Инвест" className="w-full h-auto" />
-                </a>
-                <a href="https://alfabank.ru/">
-                    <img src="/images/banks/Alfa-Bank.svg" alt="Альфа-Банк" className="w-full h-auto" />
-                </a>
-                <a href="https://www.gazprombank.ru/">
-                    <img src="/images/banks/Gazprombank_2022.svg" alt="Газпромбанк" className="w-full h-auto" />
-                </a>
+            <div className="flex flex-col md:flex-row md:h-32 space-y-8 md:space-y-0 md:space-x-12 justify-center items-center icon-container">
+                <div>
+                    <a href="https://domclick.ru/">
+                        <img src="/images/banks/Domclick_logo.svg" alt="" />
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.vtb.ru/">
+                        <img src="/images/banks/VTB_Logo_2018.svg" alt="" />
+                    </a>
+                </div>
+                <div>
+                    <a href="https://дом.рф/">
+                        <img src="/images/banks/domrf.svg" alt="" />
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.centrinvest.ru/">
+                        <img src="/images/banks/bank_center_invest.svg" alt="" />
+                    </a>
+                </div>
+                <div>
+                    <a href="https://alfabank.ru/">
+                        <img src="/images/banks/Alfa-Bank.svg" alt="" />
+                    </a>
+                </div>
+                <div>
+                    <a href="https://www.gazprombank.ru/">
+                        <img src="/images/banks/Gazprombank_2022.svg" alt="" />
+                    </a>
+                </div>
             </div>
         </div>
     );

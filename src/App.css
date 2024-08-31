@@ -3,7 +3,7 @@ html {
 }
 
 .icon-container {
-    @apply inline-block transition-all duration-300;
+    @apply transition-all duration-300;
 }
 
 .icon-container img {

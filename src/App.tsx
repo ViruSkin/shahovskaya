@@ -1,14 +1,15 @@
 import "./App.css";
+import { Houses } from "./db";
 import Header from "./components/Header";
 import Maps from "./components/Maps";
 import NavbarComponent from "./components/Navbar";
 import FooterComponent from "./components/Footer";
 import FeedBack from "./components/Feedback";
 import House2 from "./components/House2";
-import { Houses } from "./db";
 import TimelineComponent from "./components/Timeline";
 import Plan from "./components/Plan";
 import Credit from "./components/Credit";
+import Project from "./components/Project";
 
 function App() {
     return (
@@ -19,14 +20,16 @@ function App() {
                     <Header />
                 </header>
                 <main className="flex-grow">
-                    <div id="about" className="pt-16">О проекте</div>
+                    <div id="about" className="pt-16">
+                      <Project/>
+                    </div>
                     <div id="timeline" className="mx-12 pt-16">
                         <TimelineComponent />
                     </div>
                     <div id="map" className="pt-16">
                         <Maps />
                     </div>
-                    <div id="plan" className="pt-16">
+                    <div id="plan" className="pt-0">
                         <Plan />
                     </div>
                     <div id="houses" className="flex md:flex-row flex-col md:space-y-0 space-y-4 md:space-x-8 mx-8 pt-16">

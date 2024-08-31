@@ -1,8 +1,21 @@
 "use client";
 
 import { Navbar } from "flowbite-react";
+import { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 export default function NavbarComponent() {
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.hash) {
+            const element = document.querySelector(location.hash);
+            if (element) {
+                element.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+    }, [location]);
+
     return (
         <Navbar fluid rounded className="fixed top-0 w-full z-50">
             <Navbar.Brand href="https://flowbite-react.com">
@@ -15,15 +28,27 @@ export default function NavbarComponent() {
                 <Navbar.Toggle />
             </div>
             <Navbar.Collapse>
-                <Navbar.Link href="#" active>
+                <Navbar.Link as={Link} to="/#" active>
                     Главная
                 </Navbar.Link>
-                <Navbar.Link href="#about">О проекте</Navbar.Link>
-                <Navbar.Link href="#map">Карта</Navbar.Link>
-                <Navbar.Link href="#houses">Дома</Navbar.Link>
-                <Navbar.Link href="#credit">Кредитования</Navbar.Link>
-                <Navbar.Link href="#feedback">Обратная связь</Navbar.Link>
-                <Navbar.Link href="#footer">Контакты</Navbar.Link>
+                <Navbar.Link as={Link} to="/#about">
+                    О проекте
+                </Navbar.Link>
+                <Navbar.Link as={Link} to="/#map">
+                    Карта
+                </Navbar.Link>
+                <Navbar.Link as={Link} to="/#houses">
+                    Дома
+                </Navbar.Link>
+                <Navbar.Link as={Link} to="/#credit">
+                    Ипотека
+                </Navbar.Link>
+                <Navbar.Link as={Link} to="/#feedback">
+                    Обратная связь
+                </Navbar.Link>
+                <Navbar.Link as={Link} to="/#footer">
+                    Контакты
+                </Navbar.Link>
             </Navbar.Collapse>
         </Navbar>
     );
