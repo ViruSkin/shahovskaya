@@ -18,7 +18,7 @@ const Credit = () => {
                     адрес
                 </div>
             </div>
-            <div className="flex flex-col md:flex-row md:h-32 space-y-8 md:space-y-0 md:space-x-12 justify-center items-center icon-container">
+            <div className="flex flex-col mt-4 md:flex-row md:h-32 space-y-8 md:space-y-0 md:space-x-12 justify-center items-center icon-container">
                 <div>
                     <a href="https://domclick.ru/">
                         <img src="/images/banks/Domclick_logo.svg" alt="" />

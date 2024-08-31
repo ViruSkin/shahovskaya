@@ -1,10 +1,10 @@
 const Plan = () => {
     return (
-        <div className="flex flex-row">
-            <div className="basis-1/2">
+        <div className="flex flex-col md:flex-row">
+            <div className="md:basis-1/2">
                 <img src="/images/plan.jpg" alt="" />
             </div>
-            <div className="basis-1/2 flex items-center">
+            <div className="md:basis-1/2 flex items-center">
                 <div>
                     <p className="indent-8">
                         Наш уютный коттеджный поселок спроектирован с учетом всех потребностей современной семьи. На

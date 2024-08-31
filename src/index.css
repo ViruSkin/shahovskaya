@@ -3,3 +3,17 @@
 @tailwind utilities;
 
 
+/* Изменение цвета стрелок навигации */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #00ff00; /* Здесь вы можете указать свой цвет */
+}
+
+/* Изменение цвета точек пагинации */
+.swiper-pagination-bullet {
+  background-color: #ffffff; /* Основной цвет точек пагинации */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #00ff00; /* Цвет активной точки */
+}
