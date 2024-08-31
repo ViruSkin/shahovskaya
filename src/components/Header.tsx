@@ -1,16 +1,12 @@
 export default function Header() {
     return (
-        <div
-            className="relative w-full"
-            style={{
-                paddingTop: "56.25%",
-                backgroundImage: `url('/images/header.jpg')`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-            }}
-        >
-            <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center">
+        <div className="relative w-full">
+            <div className="md:hidden">
+                <img src="/images/logotype.svg" alt="логотип" />
+            </div>
+            <img src="/images/header.jpg" alt="Header Background" className="w-full h-full object-cover" />
+
+            <div className="hidden md:flex flex-col items-center absolute top-0 left-0 w-full h-full">
                 <img
                     src="/images/logotype.svg"
                     alt="логотип"
