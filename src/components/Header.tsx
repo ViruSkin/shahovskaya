@@ -1,7 +1,7 @@
 export default function Header() {
     return (
         <div className="relative w-full">
-            <div className="md:hidden mx-32">
+            <div className="md:hidden mx-32 mt-8">
                 <img src="/images/logotype3.svg" alt="логотип" />
             </div>
             <img src="/images/header.jpg" alt="Header Background" className="w-full h-full object-cover" />
