@@ -2,7 +2,6 @@ import "./App.css";
 import { Houses } from "./db";
 import Header from "./components/Header";
 import Maps from "./components/Maps";
-import NavbarComponent from "./components/Navbar";
 import FooterComponent from "./components/Footer";
 import FeedBack from "./components/Feedback";
 import House2 from "./components/House2";

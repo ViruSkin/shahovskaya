@@ -8,7 +8,7 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Canvas, FabricImage, Rect } from "fabric";
+import { Canvas, FabricImage } from "fabric";
 
 
 import FooterComponent from "../components/Footer";

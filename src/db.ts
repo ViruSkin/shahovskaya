@@ -1,22 +1,4 @@
-interface House {
-    name: string;
-    images: string[];
-    description: string;
-    planImg: string;
-    plan: {
-        width: number;
-        height: number;
-        sq: number;
-        rooms: {
-            name: string;
-            sq: number;
-            l: number;
-            t: number;
-            w: number;
-            h: number;
-        }[];
-    };
-}
+
 export const Houses = [
     {
         name: "Gloria",
