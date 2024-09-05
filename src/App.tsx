@@ -15,8 +15,8 @@ function App() {
     return (
         <>
             <div className="flex flex-col min-h-screen">
-                <header className="mt-8">
-                    <NavbarComponent />
+                <header>
+                    {/* <NavbarComponent /> */}
                     <Header />
                 </header>
                 <main className="flex-grow">

@@ -2,6 +2,7 @@ html {
     scroll-behavior: smooth;
 }
 
+
 .icon-container {
     @apply transition-all duration-300;
 }
