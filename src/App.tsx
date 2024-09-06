@@ -1,52 +1,54 @@
 import "./App.css";
-import { Houses } from "./db";
+
 import Header from "./components/Header";
-import Maps from "./components/Maps";
+import Block1 from "./components/Block1";
+import Block2 from "./components/Block2";
+import Block3 from "./components/Block3";
+import Block4 from "./components/Block4";
+import Block5 from "./components/Block5";
+import Block6 from "./components/Block6";
+import Block7 from "./components/Block7";
+import Block8 from "./components/Block8";
+import Block9 from "./components/Block9";
 import FooterComponent from "./components/Footer";
-import FeedBack from "./components/Feedback";
-import House2 from "./components/House2";
-import TimelineComponent from "./components/Timeline";
-import Plan from "./components/Plan";
-import Credit from "./components/Credit";
-import Project from "./components/Project";
 
 function App() {
     return (
         <>
             <div className="flex flex-col min-h-screen">
                 <header>
-                    {/* <NavbarComponent /> */}
                     <Header />
                 </header>
                 <main className="flex-grow">
-                    <div id="about" className="pt-16">
-                      <Project/>
+                    <div id="about">
+                        <Block1 />
                     </div>
-                    <div id="timeline" className="mx-12 pt-16">
-                        <TimelineComponent />
+                    <div id="about">
+                        <Block2 />
                     </div>
-                    <div id="map" className="pt-16">
-                        <Maps />
+                    <div id="timeline">
+                        <Block3 />
                     </div>
-                    <div id="plan" className="pt-0">
-                        <Plan />
+                    <div id="map">
+                        <Block4 />
                     </div>
-                    <div id="houses" className="flex md:flex-row flex-col md:space-y-0 space-y-4 md:space-x-8 mx-8 pt-16">
-                        {Houses.map((house) => (
-                            <div className="md:basis-1/3" key={house.name}>
-                                <House2 {...house} />
-                            </div>
-                        ))}
+                    <div id="plan">
+                        <Block5 />
                     </div>
-
-                    <div id="credit" className="pt-16">
-                        <Credit />
+                    <div id="houses">
+                        <Block6 />
                     </div>
-                    <div id="feedback" className="pt-16">
-                        <FeedBack />
+                    <div id="credit">
+                        <Block7 />
+                    </div>
+                    <div id="company">
+                        <Block8 />
+                    </div>
+                    <div id="feedback">
+                        <Block9 />
                     </div>
                 </main>
-                <footer id="footer" className="mt-8">
+                <footer id="footer">
                     <FooterComponent />
                 </footer>
             </div>

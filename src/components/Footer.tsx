@@ -1,81 +1,69 @@
-"use client";
+import { Link } from "react-router-dom";
+import { SiFacebook, SiInstagram, SiTelegram, SiWhatsapp } from "react-icons/si";
+import { FiPhone } from "react-icons/fi";
+import { MdOutlineMailOutline } from "react-icons/md";
 
-import { Footer } from "flowbite-react";
-import { BsFacebook, BsInstagram, BsTelegram, BsTwitter } from "react-icons/bs";
-import { FaVk } from "react-icons/fa";
-
-export default function Component() {
+export default function Footer() {
     return (
-        <Footer bgDark>
-            <div className="w-full">
-                <div className="grid w-full grid-cols-2 gap-8 px-6 py-8 md:grid-cols-4">
-                    <div>
-                        <Footer.Title title="Company" />
-                        <Footer.LinkGroup col>
-                            <Footer.Link href="#">About</Footer.Link>
-                            <Footer.Link href="#">Careers</Footer.Link>
-                            <Footer.Link href="#">Brand Center</Footer.Link>
-                            <Footer.Link href="#">Blog</Footer.Link>
-                        </Footer.LinkGroup>
+        <div className="relative w-full bg-[#131313]">
+            <div className="flex flex-row mx-auto h-full max-w-screen-lg relative z-10 text-white font-thin py-10">
+                <div className="basis-1/4 flex items-center">
+                    <img src="/images/logotype4.svg" alt="логотип" className="flex px-10" />
+                </div>
+                <div className="basis-1/4 pl-6">
+                    <ul className="space-y-2">
+                        <li>
+                            <Link to="/#company">О нас</Link>
+                        </li>
+                        <li>
+                            <Link to="/#map">Карта</Link>
+                        </li>
+                        <li>
+                            <Link to="/#houses">Дома</Link>
+                        </li>
+                        <li>
+                            <Link to="/#credit">Ипотека</Link>
+                        </li>
+                        <li>
+                            <Link to="/#feedback">Обратная связь</Link>
+                        </li>
+                        <li>
+                            <Link to="/#company">Контакты</Link>
+                        </li>
+                    </ul>
+                </div>
+                <div className="basis-1/4 flex flex-col space-y-2">
+                    <div className="flex items-center">
+                        <FiPhone className="mr-2" /> +7 999 123-45-67
                     </div>
+                    <div>c 9:00 до 21:00</div>
                     <div>
-                        <Footer.Title title="help center" />
-                        <Footer.LinkGroup col>
-                            <Footer.Link href="#">Discord Server</Footer.Link>
-                            <Footer.Link href="#">Twitter</Footer.Link>
-                            <Footer.Link href="#">Facebook</Footer.Link>
-                            <Footer.Link href="#">Contact Us</Footer.Link>
-                        </Footer.LinkGroup>
+                        <button className="bg-black border-2 border-mynormal text-mynormal hover:bg-myhover hover:text-white">
+                            ОБРАТНЫЙ ЗВОНОК
+                        </button>
                     </div>
-                    <div>
-                        <Footer.Title title="legal" />
-                        <Footer.LinkGroup col>
-                            <Footer.Link href="#">Privacy Policy</Footer.Link>
-                            <Footer.Link href="#">Licensing</Footer.Link>
-                            <Footer.Link href="#">Terms &amp; Conditions</Footer.Link>
-                        </Footer.LinkGroup>
-                    </div>
-                    <div>
-                        <Footer.Title title="download" />
-                        <Footer.LinkGroup col>
-                            <Footer.Link href="#">iOS</Footer.Link>
-                            <Footer.Link href="#">Android</Footer.Link>
-                            <Footer.Link href="#">Windows</Footer.Link>
-                            <Footer.Link href="#">MacOS</Footer.Link>
-                        </Footer.LinkGroup>
+                    <div className="flex items-center">
+                        <MdOutlineMailOutline className="mr-2" /> info@gmail.com
                     </div>
                 </div>
-                <div className="w-full bg-gray-700 px-4 py-6 sm:flex sm:items-center sm:justify-between">
-                    <Footer.Copyright href="#" by="Шаховская усадьба" year={2024} />
-                    <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
-                        <Footer.Icon
-                            href="https://vk.com/ShakhovskayaUsadba"
-                            icon={FaVk}
-                            className="hover:text-[#4C75A3]"
-                        />
-                        <Footer.Icon
-                            href="https://t.me/ShakhovskayaUsadba"
-                            icon={BsTelegram}
-                            className="hover:text-[#0088cc]"
-                        />
-                        <Footer.Icon
-                            href="https://facebook.com/ShakhovskayaUsadba"
-                            icon={BsFacebook}
-                            className="hover:text-[#1877F2]"
-                        />
-                        <Footer.Icon
-                            href="https://instagram.com/ShakhovskayaUsadba"
-                            icon={BsInstagram}
-                            className="hover:text-[#E1306C]"
-                        />
-                        <Footer.Icon
-                            href="https://x.com/ShakhovskayaUsadba"
-                            icon={BsTwitter}
-                            className="hover:text-[#1DA1F2]"
-                        />
+                <div className="basis-1/4 space-y-4">
+                    <h6>Наши соцсети:</h6>
+                    <div className="flex space-x-4">
+                        <a href="https://t.me/company" className="hover:text-[#0088cc]">
+                            <SiTelegram />
+                        </a>
+                        <a href="https://instagram.com/company" className="hover:text-[#E1306C]">
+                            <SiInstagram />
+                        </a>
+                        <a href="https://facebook.com/company" className="hover:text-[#1877F2]">
+                            <SiFacebook />
+                        </a>
+                        <a href="https://wa.me/company" className="hover:text-[#075e54]">
+                            <SiWhatsapp />
+                        </a>
                     </div>
                 </div>
             </div>
-        </Footer>
+        </div>
     );
 }

@@ -1,38 +1,42 @@
-html {
-    scroll-behavior: smooth;
+.linerBlack::after {
+    content: "";
+    display: block;
+    width: 110%; /* Ширина изображения */
+    height: 100%; /* Высота изображения */
+    background-image: url("/images/line.svg"); /* Путь к вашему SVG изображению */
+    background-size: 100% auto; /* Масштабирование изображения, чтобы оно покрывало весь элемент */
+    background-position: center; /* Центрирование изображения */
+    background-repeat: no-repeat; /* Отключение повторения изображения */
+    position: absolute; /* Абсолютное позиционирование */
+    top: 0; /* Позиционирование сверху */
+    left: -50%; /* Позиционирование слева */
+    z-index: 100; /* Помещаем изображение за контентом */
+}
+.linerWhite::after {
+    content: "";
+    display: block;
+    width: 120%; /* Ширина изображения */
+    height: 100%; /* Высота изображения */
+    background-image: url("/images/line.svg"); /* Путь к вашему SVG изображению */
+    background-size: 100% auto; /* Масштабирование изображения, чтобы оно покрывало весь элемент */
+    background-position: center; /* Центрирование изображения */
+    background-repeat: no-repeat; /* Отключение повторения изображения */
+    position: absolute; /* Абсолютное позиционирование */
+    top: 0; /* Позиционирование сверху */
+    left: -50%; /* Позиционирование слева */
+    z-index: 100; /* Помещаем изображение за контентом */
+    filter: invert(1); /* Инвертируем цвет изображения */
 }
 
-
-.icon-container {
-    @apply transition-all duration-300;
+button {
+    @apply bg-mynormal px-3 py-1 hover:bg-myhover text-white;
 }
 
-.icon-container img {
-    @apply transition-all duration-300;
+input[type="text"] {
+    @apply border-0 border-b-2 border-mynormal;
 }
-
-@media (min-width: 768px) {
-    .icon-container img {
-        filter: grayscale(100%);
-    }
-
-    .icon-container img:hover {
-        @apply filter grayscale-0;
-    }
-}
-
-
-/* Изменение цвета стрелок навигации */
-.swiper-button-next,
-.swiper-button-prev {
-  color: #fff !important;; /* Здесь вы можете указать свой цвет */
-}
-
-/* Изменение цвета точек пагинации */
-.swiper-pagination-bullet {
-  background-color: #ffffff !important;; /* Основной цвет точек пагинации */
-}
-
-.swiper-pagination-bullet-active {
-  background-color: #00ff00 !important;; /* Цвет активной точки */
+input[type="text"]:focus,
+input[type="text"]:active,
+input[type="text"]:hover {
+    @apply border-0 ring-0 border-b-2 border-myactive;
 }

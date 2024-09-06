@@ -1,0 +1,21 @@
+.icon-container {
+    @apply transition-all duration-300;
+}
+
+.icon-container img {
+    @apply transition-all duration-300;
+}
+
+.icon-container div {
+    @apply flex justify-center items-center;
+}
+
+@media (min-width: 768px) {
+    .icon-container img {
+        filter: grayscale(100%);
+    }
+
+    .icon-container img:hover {
+        @apply filter grayscale-0;
+    }
+}

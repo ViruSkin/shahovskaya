@@ -2,18 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    scroll-behavior: smooth;
+}
+
+@layer base {
+    body {
+        @apply font-sans; /* Использовать Geologica как основной шрифт */
+        font-feature-settings: "curs" 1; /* Активировать стиль Cursive для Geologica */
+        font-weight: 200;
+        font-size: 16px;
+    }
+}
 
 /* Изменение цвета стрелок навигации */
 .swiper-button-next,
 .swiper-button-prev {
-  color: #00ff00; /* Здесь вы можете указать свой цвет */
+    color: #fff !important; /* Здесь вы можете указать свой цвет */
 }
 
 /* Изменение цвета точек пагинации */
 .swiper-pagination-bullet {
-  background-color: #ffffff; /* Основной цвет точек пагинации */
+    background-color: #ffffff !important; /* Основной цвет точек пагинации */
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #00ff00; /* Цвет активной точки */
+    background-color: #00ff00 !important; /* Цвет активной точки */
 }

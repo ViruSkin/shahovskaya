@@ -49,7 +49,7 @@ export default function Header() {
                                 <div className="text-5xl font-thin">ШАХОВСКАЯ УСАДЬБА</div>
                                 <div className="font-thin">УНИКАЛЬНЫЙ КЛУБНЫЙ ЖИЛОЙ КОМПЛЕКС В СЕРДЦЕ ПОДМОСКОВЬЯ</div>
                                 <div>
-                                    <span className="bg-mynormal px-3 py-1">ОБРАТНЫЙ ЗВОНОК</span>
+                                    <button>ОБРАТНЫЙ ЗВОНОК</button>
                                 </div>
                             </div>
                         </div>

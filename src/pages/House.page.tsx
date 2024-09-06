@@ -12,7 +12,6 @@ import { Canvas, FabricImage } from "fabric";
 
 
 import FooterComponent from "../components/Footer";
-import NavbarComponent from "../components/Navbar";
 import { Houses } from "../db";
 interface HouseProps {
     name: string;
@@ -119,9 +118,6 @@ const HousePage: React.FC<HouseProps> = ({ name }) => {
     });
     return (
         <div className="flex flex-col min-h-screen">
-            <header className="mt-16">
-                <NavbarComponent />
-            </header>
             <main className="flex-grow">
                 <div className="flex flex-col">
                     <div className="flex justify-center font-bold text-3xl m-3">{name}</div>
