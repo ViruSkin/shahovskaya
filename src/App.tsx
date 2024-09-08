@@ -1,22 +1,25 @@
 import "./App.css";
 
-import Header from "./components/Header";
-import Block1 from "./components/Block1";
-import Block2 from "./components/Block2";
-import Block3 from "./components/Block3";
-import Block4 from "./components/Block4";
-import Block5 from "./components/Block5";
-import Block6 from "./components/Block6";
-import Block7 from "./components/Block7";
-import Block8 from "./components/Block8";
-import Block9 from "./components/Block9";
-import FooterComponent from "./components/Footer";
+import Header from "./blocks/Header";
+import Block1 from "./blocks/Block1";
+import Block2 from "./blocks/Block2";
+import Block3 from "./blocks/Block3";
+import Block4 from "./blocks/Block4";
+import Block5 from "./blocks/Block5";
+import Block6 from "./blocks/Block6";
+import Block7 from "./blocks/Block7";
+import Block8 from "./blocks/Block8";
+import Block9 from "./blocks/Block9";
+import FooterComponent from "./blocks/Footer";
+import Navbar from "./components/Navbar";
 
 function App() {
     return (
         <>
-            <div className="flex flex-col min-h-screen">
+            <div className="flex flex-col md:min-h-screen w-full ">
                 <header>
+                    <Navbar />
+
                     <Header />
                 </header>
                 <main className="flex-grow">
@@ -47,7 +50,7 @@ function App() {
                     <div id="feedback">
                         <Block9 />
                     </div>
-                </main>
+                </main>{" "}
                 <footer id="footer">
                     <FooterComponent />
                 </footer>

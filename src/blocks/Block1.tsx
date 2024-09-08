@@ -3,7 +3,7 @@ const Block1 = () => {
         <>
             <div className="mx-auto max-w-screen-lg flex flex-row relative pb-12 mt-5">
                 <div className="basis-1/3 flex items-center">
-                    <img src="/images/about.webp" className="object-cover" alt="" />
+                    <img src="/images/1.webp" className="object-cover" alt="" />
                 </div>
                 <div className="basis-2/3 text-justify space-y-5 ml-20 text-sm">
                     <h1 className="text-5xl font-light">О ПРОЕКТЕ</h1>
@@ -22,7 +22,7 @@ const Block1 = () => {
                     </p>
                     <p className="text-xl">
                         <span className="text-mynormal">Наше кредо — удивлять.</span> Мы стремимся предложить больше,
-                        чем обычные стандарты{" "}
+                        чем обычные стандарты
                     </p>
                     <p>
                         Предвосхищая ваши ожидания и создавая особую атмосферу уюта и обособленности, завораживающую с

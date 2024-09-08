@@ -1,4 +1,3 @@
-import { HR } from "flowbite-react";
 import "./block7.css";
 
 const Block7 = () => {
@@ -11,17 +10,17 @@ const Block7 = () => {
                 <div className="basis-2/3 text-justify ml-20 text-sm">
                     <h1 className="text-5xl font-light">ВСЕ ВИДЫ ИПОТЕКИ</h1>
                     <div>
-                        <HR className="w-20 bg-mynormal mt-4 mb-2" />
+                        <hr className="w-20 bg-mynormal mt-4 mb-2" />
                         <div>
                             Homewerk предлагает своим клиентам специальные условия приобретения дома в рамках программ
                             ипотечного кредитования от банков-партнеров.
                         </div>
-                        <HR className="w-20 bg-mynormal mt-4 mb-2" />
+                        <hr className="w-20 bg-mynormal mt-4 mb-2" />
                         <div>
                             Личный менеджер сопровождает Вас на всех этапах сделки, с момента подачи документов в банк и
                             до регистрации объекта.
                         </div>
-                        <HR className="w-20 bg-mynormal mt-4 mb-2" />
+                        <hr className="w-20 bg-mynormal mt-4 mb-2" />
                         <div>
                             Всего за несколько часов банк оповестит Вас смс информированием и уведомлением на Ваш
                             электронный адрес
