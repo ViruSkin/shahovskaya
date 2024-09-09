@@ -1,6 +1,0 @@
-#rightBlock h5 {
-    @apply text-mynormal ml-3;
-}
-#rightBlock span {
-    @apply font-extralight text-sm;
-}

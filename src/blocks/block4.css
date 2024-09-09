@@ -1,7 +1,0 @@
-#list div {
-    @apply flex items-center
-} 
-
-#list div h5 {
-    @apply text-5xl text-mynormal inline-block pr-3
-}

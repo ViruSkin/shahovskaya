@@ -2,17 +2,36 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 html {
     scroll-behavior: smooth;
 }
 
-@layer base {
-    body {
-        @apply font-sans; /* Использовать Geologica как основной шрифт */
-        font-feature-settings: "curs" 1; /* Активировать стиль Cursive для Geologica */
-        font-weight: 200;
-        font-size: 16px;
+.container {
+    @apply max-w-[1276px] mx-auto
+}
+
+@media (max-width: 1316px) {
+    .container {
+        @apply max-w-[calc(100%_-_40px)]
     }
+}
+
+[class*="copyrights-pane"] {
+	display: none !important;
+}
+
+.new-life-swp .swiper-wrapper {
+    align-items: stretch;
+}
+
+.new-life-swp .swiper-slide {
+    height: auto;
+}
+
+input {
+    @apply outline-none w-full px-[15px] py-[13px] border-b border-b-black-1 text-black-1 placeholder:text-gray-1 text-lg leading-[150%]
 }
 
 /* Изменение цвета стрелок навигации */

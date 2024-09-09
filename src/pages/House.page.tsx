@@ -11,7 +11,7 @@ import "swiper/css/pagination";
 import { Canvas, FabricImage } from "fabric";
 
 
-import FooterComponent from "../blocks/Footer";
+import FooterComponent from "../components/Footer";
 import { Houses } from "../db";
 interface HouseProps {
     name: string;
