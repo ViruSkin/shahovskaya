@@ -8,8 +8,10 @@ import { Pagination } from 'swiper/modules';
 import IMG from '../assets/images';
 import Contact from '../components/Contact';
 
+import SwiperCore from 'swiper';
+
 const Project:React.FC = () => {
-    const swp = useRef(null)
+    const swp = useRef<SwiperCore | null>(null)
     return (<>
         <section className='pt-[162px]'>
             <div className="container text-center">
@@ -17,10 +19,10 @@ const Project:React.FC = () => {
                 <p className="max-w-[844px] mx-auto mb-5">Просторный дом площадью 132 м² с тремя спальнями и большой гостиной, идеально подходит для семейного проживания. Высокий уровень комфорта и современные строительные материалы обеспечат уют и долговечность.</p>
             </div>
             <div className="container relative z-[2]">
-                <button onClick={() => {swp.current.swiper.slidePrev()}} className="w-[56px] h-[56px] flex items-center justify-center rounded-full bg-white absolute top-[372px] left-0">
+                <button onClick={() => {swp.current?.slidePrev()}} className="w-[56px] h-[56px] flex items-center justify-center rounded-full bg-white absolute top-[372px] left-0">
                     <img src={IMG.chevronIcon} alt="" className="rotate-180" />
                 </button>
-                <button onClick={() => {swp.current.swiper.slideNext()}} className="w-[56px] h-[56px] flex items-center justify-center rounded-full bg-white absolute top-[372px] right-0">
+                <button onClick={() => {swp.current?.slideNext()}} className="w-[56px] h-[56px] flex items-center justify-center rounded-full bg-white absolute top-[372px] right-0">
                     <img src={IMG.chevronIcon} alt="" />
                 </button>
             </div>
@@ -32,10 +34,10 @@ const Project:React.FC = () => {
                 clickable: true,
                 }}
                 modules={[Pagination]}
-                ref={swp}
+                onSwiper={(swiperInstance) => (swp.current = swiperInstance)}
                 className="mb-[75px]"
             >
-                {[1, 2, 3, 4, 5, 6].map((data, dataIdx) => (
+                {[1, 2, 3, 4, 5, 6].map((dataIdx) => (
                     <SwiperSlide key={dataIdx} className="h-[800px]">
                         <img src={IMG.projectCard} alt="" className="w-full h-full object-cover" />
                     </SwiperSlide>

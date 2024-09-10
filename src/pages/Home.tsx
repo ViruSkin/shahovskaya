@@ -12,9 +12,13 @@ import Title from "../components/Title.tsx";
 import React, { useState } from "react";
 import Contact from "../components/Contact.tsx";
 
+interface MyObject {
+    title: string;
+    description: string;
+}
 
 const Home: React.FC = () => {
-    const [chooceList, setChooceList] = useState([
+    const [chooceList] = useState<MyObject[]>([
         {title: "Питание", description: "Рестораны, кафе"},
         {title: "Покупки", description: "Торговые центры, супермаркет"},
         {title: "Развлечения", description: "Школа танцев, бильярд"},

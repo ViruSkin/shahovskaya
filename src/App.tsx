@@ -1,5 +1,5 @@
 
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { Outlet } from "react-router-dom";
 import Home from "./pages/Home.tsx";
 import Project from "./pages/Project.tsx";

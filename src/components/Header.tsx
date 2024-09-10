@@ -38,7 +38,7 @@ export default function Header () {
                         <img src={IMG.phoneIcon} alt="" />
                         <span>+7 999 123-45-67</span>
                     </a>
-                    <Btn theme="light">Обратный звонок</Btn>
+                    <Btn className="" theme="light">Обратный звонок</Btn>
                 </div>
             </div>
         </div>
