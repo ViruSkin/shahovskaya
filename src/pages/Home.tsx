@@ -10,6 +10,7 @@ import IMG from "../assets/images/index.tsx";
 import Btn from "../components/Btn.tsx";
 import Title from "../components/Title.tsx";
 import React, { useState } from "react";
+import Contact from "../components/Contact.tsx";
 
 
 const Home: React.FC = () => {
@@ -458,26 +459,7 @@ const Home: React.FC = () => {
         {/* Company end */}
 
         {/* Contact */}
-        <section className="py-[80px]">
-            <div className="container flex items-start gap-[128px] relative">
-                <div className="absolute right-0 top-12">
-                    <Title theme="dark">09</Title>
-                </div>
-                <div className="w-[520px] flex-shrink-0 rounded-[3px] overflow-hidden">
-                    <img src={IMG.contactCard} alt="" className="w-full" />
-                </div>
-                <div className="pt-[38px]">
-                    <div className="max-w-[412px]">
-                        <h2 className="text-[60px] leading-[75px] uppercase mb-5">Свяжитесь <br /> с нами</h2>
-                        <p className="text-lg font-thin leading-[140%] mb-9">Заполните форму и наши специалисты свяжутся с вами в течение 30 минут</p>
-                        <input type="text" placeholder="Ваше имя" className="mb-10" />
-                        <input type="tel" placeholder="Номер телефона" className="mb-10" />
-                        <Btn theme="green" className="w-full !font-light mb-[7px]">Оставить заявку</Btn>
-                        <p className="font-thin text-xs leading-[15px] text-center">Нажимая на кнопку вы соглашаетесь с условиями Политики конфиденциальности</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <Contact reverse={false}/>
         {/* Contact end */}
 
     </>);

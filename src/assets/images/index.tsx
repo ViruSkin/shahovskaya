@@ -23,6 +23,9 @@ import telegram from './telegram.svg';
 import instagram from './instagram.svg';
 import facebook from './facebook.svg';
 import whatsapp from './whatsapp.svg';
+import projectCard from './project-card.png';
+import chevronIcon from './chevron-icon.svg';
+import scheme from './scheme.png';
 
 const IMG = {
     headerLogo,
@@ -50,6 +53,9 @@ const IMG = {
     instagram,
     facebook,
     whatsapp,
+    projectCard,
+    chevronIcon,
+    scheme,
 }
 
 export default IMG;
