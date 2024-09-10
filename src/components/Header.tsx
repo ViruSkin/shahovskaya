@@ -4,7 +4,11 @@ import IMG from "../assets/images";
 import Btn from './Btn.tsx'
 import { useEffect, useState } from "react";
 
-export default function Header () {
+interface headerProps {
+    setModal: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const Header:React.FC<headerProps> = ({ setModal }) => {
     const [menu, setMenu] = useState<boolean>(false);
 
     useEffect(() => {
@@ -50,7 +54,7 @@ export default function Header () {
                             <img src={IMG.phoneIcon} alt="" className="w-4 lg:w-auto" />
                             <span>+7 999 123-45-67</span>
                         </a>
-                        <Btn className="hidden lg:flex" theme="light">Обратный звонок</Btn>
+                        <Btn className="hidden lg:flex" theme="light" onClick={() => setModal(true)}>Обратный звонок</Btn>
                         <button
                             onClick={() => {setMenu(!menu)}}
                             className="flex lg:hidden items-center justify-center w-6 h-6 flex-shrink-0"
@@ -96,7 +100,7 @@ export default function Header () {
                 <img src={IMG.mailDark} alt="" />
                 <span>info@gmail.com</span>
             </a>
-            <Btn className="mb-4" theme="light-green">Обратный звонок</Btn>
+            <Btn className="mb-4" theme="light-green" onClick={() => setModal(true)}>Обратный звонок</Btn>
             <p className="text-base leading-[22px] mb-2">Наши соцсети:</p>
             <div className="flex items-center gap-[10px]">
                 <a href="#">
@@ -115,3 +119,5 @@ export default function Header () {
         </div>
     </>)
 }
+
+export default Header;

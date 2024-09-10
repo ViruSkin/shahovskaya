@@ -2,7 +2,11 @@ import { Link } from "react-router-dom";
 import IMG from "../assets/images";
 import Btn from "./Btn.tsx";
 
-export default function Footer() {
+interface footerProps {
+    setModal: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const Footer:React.FC<footerProps> = ({ setModal }) => {
     return (
         <footer className="relative bg-black-1 pt-6 lg:pt-[15px] pb-12 lg:pb-[30px] text-white">
             <div className="container flex flex-col lg:flex-row items-center lg:items-start lg:justify-between gap-6 lg:gap-0">
@@ -38,7 +42,7 @@ export default function Footer() {
                             <span>+7 999 123-45-67</span>
                         </a>
                         <p className="mb-4 text-center lg:text-start">с 9:00 до 21:00</p>
-                        <Btn theme="light-green" className="mb-5">Обратный звонок</Btn>
+                        <Btn theme="light-green" className="mb-5" onClick={() => setModal(true)}>Обратный звонок</Btn>
                         <a href="mailto:info@gmail.com" className="flex items-center gap-[5px]">
                             <img src={IMG.mail} alt="" />
                             <span>info@gmail.com</span>
@@ -67,3 +71,5 @@ export default function Footer() {
         </footer>
     );
 }
+
+export default Footer;

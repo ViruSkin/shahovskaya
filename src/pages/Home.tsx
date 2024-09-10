@@ -17,7 +17,11 @@ interface MyObject {
     description: string;
 }
 
-const Home: React.FC = () => {
+interface homeProps {
+    setModal: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const Home: React.FC<homeProps> = ({ setModal }) => {
     const [chooceList] = useState<MyObject[]>([
         {title: "Питание", description: "Рестораны, кафе"},
         {title: "Покупки", description: "Торговые центры, супермаркет"},
@@ -42,7 +46,7 @@ const Home: React.FC = () => {
                 <div className="container">
                     <h2 className="text-4xl lg:text-[60px] leading-[45px] lg:leading-[75px] uppercase mb-2 lg:mb-[10px]">Шаховская Усадьба</h2>
                     <p className="text-base lg:text-xl leading-[22px] lg:leading-[25px] uppercase mb-4 lg:mb-5">уникальный клубный жилой квартал в сердце Подмосковья</p>
-                    <Btn className="" theme="green">Обратный звонок</Btn>
+                    <Btn className="" theme="green" onClick={() => setModal(true)}>Обратный звонок</Btn>
                 </div>
             </div>
         </section>
@@ -352,7 +356,7 @@ const Home: React.FC = () => {
                                 <h3 className="text-center font-normal text-xl leading-[25px] uppercase mb-[10px]">Gloria</h3>
                                 <p className="font-thin text-[17px] lg:text-lg leading-[140%]">Просторный дом площадью 132 м² с тремя спальнями и большой гостиной, идеально подходит для семейного проживания. Высокий уровень комфорта и современные строительные материалы обеспечат уют и долговечность.</p>
                             </div>
-                            <Btn className="" theme="green">Подробнее</Btn>
+                            <Btn className="" theme="green" onClick={() => console.log('ok')}>Подробнее</Btn>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
@@ -364,7 +368,7 @@ const Home: React.FC = () => {
                                 <h3 className="text-center font-normal text-xl leading-[25px] uppercase mb-[10px]">Katalina</h3>
                                 <p className="font-thin text-[17px] lg:text-lg leading-[140%]">Уютный дом площадью 101 м² с тремя спальнями и большой кухней-гостиной. Идеальный выбор для тех, кто ценит гармонию между пространством и функциональностью.</p>
                             </div>
-                            <Btn className="" theme="green">Подробнее</Btn>
+                            <Btn className="" theme="green" onClick={() => console.log('ok')}>Подробнее</Btn>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
@@ -376,7 +380,7 @@ const Home: React.FC = () => {
                                 <h3 className="text-center font-normal text-xl leading-[25px] uppercase mb-[10px]">Maria</h3>
                                 <p className="font-thin text-[17px] lg:text-lg leading-[140%]">Компактный дом площадью 75 м² с двумя спальнями, гостиной и кухней. Отличное решение для небольшой семьи, ищущей комфорт и экономию.</p>
                             </div>
-                            <Btn className="" theme="green">Подробнее</Btn>
+                            <Btn className="" theme="green" onClick={() => console.log('ok')}>Подробнее</Btn>
                         </div>
                     </SwiperSlide>
                 </Swiper>

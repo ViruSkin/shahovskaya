@@ -47,5 +47,17 @@ input {
 }
 
 .swiper-pagination-bullet-active {
-    background-color: #00ff00 !important; /* Цвет активной точки */
+    @apply !bg-green /* Цвет активной точки */
+}
+
+.project-swp .swiper-pagination {
+    @apply flex justify-center
+}
+
+.project-swp .swiper-pagination-bullet {
+    @apply !flex lg:hidden opacity-100 !bg-[#E0E0E0]
+}
+
+.project-swp .swiper-pagination-bullet-active {
+    @apply !bg-green;
 }

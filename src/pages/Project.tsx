@@ -31,11 +31,11 @@ const Project:React.FC = () => {
                 spaceBetween={0}
                 loop={true}
                 pagination={{
-                clickable: true,
+                    clickable: true,
                 }}
                 modules={[Pagination]}
                 onSwiper={(swiperInstance) => (swp.current = swiperInstance)}
-                className="mb-11 lg:mb-[75px]"
+                className="mb-11 lg:mb-[75px] project-swp overflow-visible"
             >
                 {[1, 2, 3, 4, 5, 6].map((dataIdx) => (
                     <SwiperSlide key={dataIdx} className="h-[240px] sm:h-[350px] md:h-[500px] lg:h-[800px]">
