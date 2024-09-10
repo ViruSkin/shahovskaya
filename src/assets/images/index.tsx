@@ -26,6 +26,13 @@ import whatsapp from './whatsapp.svg';
 import projectCard from './project-card.png';
 import chevronIcon from './chevron-icon.svg';
 import scheme from './scheme.png';
+import bars from './bars.svg';
+import times from './times.svg';
+import mailDark from './main-dark.svg';
+import telegramDark from './telegram-dark.svg';
+import instagramDark from './instagram-dark.svg';
+import facebookDark from './facebook-dark.svg';
+import whatsappDark from './whatsapp-dark.svg';
 
 const IMG = {
     headerLogo,
@@ -56,6 +63,13 @@ const IMG = {
     projectCard,
     chevronIcon,
     scheme,
+    bars,
+    times,
+    mailDark,
+    telegramDark,
+    instagramDark,
+    facebookDark,
+    whatsappDark,
 }
 
 export default IMG;

@@ -31,7 +31,7 @@ html {
 }
 
 input {
-    @apply outline-none w-full px-[15px] py-[13px] border-b border-b-black-1 text-black-1 placeholder:text-gray-1 text-lg leading-[150%]
+    @apply outline-none w-full pt-[23px] pb-[6px] px-[15px] lg:pb-[13px] lg:pt-[13px] border-b border-b-black-1 text-black-1 placeholder:text-gray-1 text-base lg:text-lg leading-[23px] lg:leading-[150%]
 }
 
 /* Изменение цвета стрелок навигации */
@@ -43,6 +43,7 @@ input {
 /* Изменение цвета точек пагинации */
 .swiper-pagination-bullet {
     background-color: #ffffff !important; /* Основной цвет точек пагинации */
+    @apply lg:!hidden translate-y-8
 }
 
 .swiper-pagination-bullet-active {

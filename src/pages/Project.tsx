@@ -13,12 +13,12 @@ import SwiperCore from 'swiper';
 const Project:React.FC = () => {
     const swp = useRef<SwiperCore | null>(null)
     return (<>
-        <section className='pt-[162px]'>
+        <section className='pt-[77px] lg:pt-[162px]'>
             <div className="container text-center">
-                <h2 className='text-[60px] leading-[75px] mb-5 uppercase'>Gloria</h2>
-                <p className="max-w-[844px] mx-auto mb-5">Просторный дом площадью 132 м² с тремя спальнями и большой гостиной, идеально подходит для семейного проживания. Высокий уровень комфорта и современные строительные материалы обеспечат уют и долговечность.</p>
+                <h2 className='text-4xl lg:text-[60px] leading-[45px] lg:leading-[75px] mb-6 lg:mb-5 uppercase'>Gloria</h2>
+                <p className="max-w-[844px] mx-auto mb-6 lg:mb-5 text-[17px] lg:text-base leadig-[140%]">Просторный дом площадью 132 м² с тремя спальнями и большой гостиной, идеально подходит для семейного проживания. Высокий уровень комфорта и современные строительные материалы обеспечат уют и долговечность.</p>
             </div>
-            <div className="container relative z-[2]">
+            <div className="container relative z-[2] hidden lg:block">
                 <button onClick={() => {swp.current?.slidePrev()}} className="w-[56px] h-[56px] flex items-center justify-center rounded-full bg-white absolute top-[372px] left-0">
                     <img src={IMG.chevronIcon} alt="" className="rotate-180" />
                 </button>
@@ -35,17 +35,17 @@ const Project:React.FC = () => {
                 }}
                 modules={[Pagination]}
                 onSwiper={(swiperInstance) => (swp.current = swiperInstance)}
-                className="mb-[75px]"
+                className="mb-11 lg:mb-[75px]"
             >
                 {[1, 2, 3, 4, 5, 6].map((dataIdx) => (
-                    <SwiperSlide key={dataIdx} className="h-[800px]">
+                    <SwiperSlide key={dataIdx} className="h-[240px] sm:h-[350px] md:h-[500px] lg:h-[800px]">
                         <img src={IMG.projectCard} alt="" className="w-full h-full object-cover" />
                     </SwiperSlide>
                 ))}
             </Swiper>
             <div className="container">
-                <div className='mb-10 flex items-start gap-5'>
-                    <ul className='w-full text-[22px] leading-[150%] font-light text-[#797979] flex flex-col gap-[15px]'>
+                <div className='mb-6 lg:mb-10 flex flex-col lg:flex-row items-start gap-4 lg:gap-5'>
+                    <ul className='w-full text-[17px] lg:text-[22px] leading-[150%] font-light text-[#797979] flex flex-col gap-4 lg:gap-[15px]'>
                         <li className='flex items-center gap-[5px]'>
                             <p>Статуса проекта:</p>
                             <p className='font-normal text-black-1'>активный</p>
@@ -62,23 +62,23 @@ const Project:React.FC = () => {
                             <p>Целевой IRR;</p>
                             <p className='font-normal text-black-1'>12%</p>
                         </li>
-                        <li className='flex items-center gap-[5px]'>
+                        <li className='flex items-end gap-[5px]'>
                             <p>Предполагаемая доходность инвестора:</p>
-                            <p className='font-normal text-black-1'>х 1,5</p>
+                            <p className='font-normal text-black-1 flex-shrink-0'>х 1,5</p>
                         </li>
-                        <li className='flex items-center gap-[5px]'>
+                        <li className='flex items-end gap-[5px]'>
                             <p>Стоимость всего проекта:</p>
-                            <p className='font-normal text-black-1'>100 000 000 $</p>
+                            <p className='font-normal text-black-1 flex-shrink-0'>100 000 000 $</p>
                         </li>
                     </ul>
-                    <ul className='w-full text-[22px] leading-[150%] font-light text-[#797979] flex flex-col gap-[15px]'>
-                        <li className='flex items-center gap-[5px]'>
+                    <ul className='w-full text-[17px] lg:text-[22px] leading-[150%] font-light text-[#797979] flex flex-col gap-[15px]'>
+                        <li className='flex items-end gap-[5px]'>
                             <p>Размер привлекаемых средств:</p>
-                            <p className='font-normal text-black-1'>100 000 000 $</p>
+                            <p className='font-normal text-black-1 flex-shrink-0'>100 000 000 $</p>
                         </li>
-                        <li className='flex items-center gap-[5px]'>
+                        <li className='flex items-end gap-[5px]'>
                             <p>Минимальная сумма инвестиций:</p>
-                            <p className='font-normal text-black-1'>100 000 000 $</p>
+                            <p className='font-normal text-black-1 flex-shrink-0'>100 000 000 $</p>
                         </li>
                         <li className='flex items-center gap-[5px]'>
                             <p>Дата начала проекта:</p>
@@ -93,7 +93,7 @@ const Project:React.FC = () => {
                             <p className='font-normal text-black-1'>Продажа проекта инвестору</p>
                         </li>
                         <li className='flex items-start gap-[5px]'>
-                            <p className='flex-shrink-0'>Обновления по проекту:</p>
+                            <p className='lg:flex-shrink-0'>Обновления по проекту:</p>
                             <p className='font-normal text-black-1'>Окончание привлечения инвестиций 15 марта 2024 года.</p>
                         </li>
                     </ul>
