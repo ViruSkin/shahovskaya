@@ -23,7 +23,7 @@ interface homeProps {
     setModal: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Home: React.FC<homeProps> = ({ setModal }) => {
+const Home: React.FC<homeProps> = ({  }) => {
     const [chooceList] = useState<MyObject[]>([
         { title: "Питание", description: "Рестораны, кафе" },
         { title: "Покупки", description: "Торговые центры, супермаркет" },
