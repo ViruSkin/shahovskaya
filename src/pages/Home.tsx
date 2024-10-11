@@ -1,3 +1,5 @@
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { YMaps, Map, Placemark, Polygon } from "@pbe/react-yandex-maps";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -9,9 +11,8 @@ import { Pagination } from "swiper/modules";
 import IMG from "../assets/images/index.tsx";
 import Btn from "../components/Btn.tsx";
 import Title from "../components/Title.tsx";
-import React, { useState } from "react";
 import Contact from "../components/Contact.tsx";
-import { Link } from "react-router-dom";
+import { MdElectricBolt } from "react-icons/md";
 
 interface MyObject {
     title: string;
@@ -43,17 +44,27 @@ const Home: React.FC<homeProps> = ({ setModal }) => {
             {/* Home */}
             <section className="relative z[1] pt-[230px] lg:pt-[276px]">
                 <img src={IMG.homeImg} alt="" className="absolute top-0 left-0 w-full h-full z-[-1] object-cover" />
-                <div className="pt-[266px] lg:pt-[358px] pb-[56px] lg:pb-[93px] text-white bg-[linear-gradient(to_bottom,rgba(35,35,35,0),#232323)]">
+                <div className="pt-[266px] lg:pt-[158px] pb-[56px] lg:pb-[93px] text-white bg-[linear-gradient(to_bottom,rgba(35,35,35,0),#232323)]">
                     <div className="container">
                         <h2 className="text-4xl lg:text-[60px] leading-[45px] lg:leading-[75px] uppercase mb-2 lg:mb-[10px]">
                             Шаховская Усадьба
                         </h2>
-                        <p className="text-base lg:text-xl leading-[22px] lg:leading-[25px] uppercase mb-4 lg:mb-5">
+                        <p className="text-base lg:text-xl leading-[22px] lg:leading-[25px] uppercase mb-4 lg:mb-10">
                             уникальный клубный жилой квартал в сердце Подмосковья
                         </p>
-                        <Btn className="" theme="green" onClick={() => setModal(true)}>
-                            Обратный звонок
-                        </Btn>
+                        <p className="rounded-md bg-lime-700 inline-block px-2 mb-4">западное направление, трасса М9</p>
+                        <div className="flex flex-row space-x-10">
+                            <div className="text-4xl text-center">
+                                <div className="h-12">80 мин</div>
+                                <span className="text-base lg:text-xl">от МКАД</span>
+                            </div>
+                            <div className="text-4xl text-center">
+                                <img src={IMG.gas} alt="логотип" className="w-[45px]" />
+                            </div>
+                            <div>
+                                <MdElectricBolt size={48} />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -563,6 +574,136 @@ const Home: React.FC<homeProps> = ({ setModal }) => {
                                 <img src={IMG.bank6} alt="" className="w-full h-full object-contain" />
                             </li>
                         </ul>
+                    </div>
+                </div>
+            </section>
+            {/* Ipoteka end */}
+
+            {/* Отзывы */}
+            <section className="pt-12 lg:pt-[80px]">
+                <div className="container">
+                    <div className="text-center">
+                        <h2 className="text-[28px] lg:text-5xl lg:leading-[60px] uppercase mb-6 lg:mb-5">
+                            отзывы от клиентов
+                        </h2>
+                    </div>
+                    <div className="flex flex-col space-y-8">
+                        <div className="flex flex-row space-x-8">
+                            <div className="basis-1/4">
+                                <div className="flex flex-row items-center justify-center">
+                                    <img
+                                        src="https://flowbite.com/docs/images/people/profile-picture-4.jpg"
+                                        className="rounded-full w-16 h-16"
+                                        alt=""
+                                    />
+                                    <div className="items-center h-full ml-6">Мария К.</div>
+                                </div>
+                                <div className="text-justify mt-2 indent-8">
+                                    Недавно приобрели дом в коттеджном посёлке, и впечатления от покупки исключительно
+                                    положительные. Во-первых, сама атмосфера поселка — это тишина, природа и ощущение
+                                    уюта вдали от городской суеты. Инфраструктура продумана до мелочей: охраняемая
+                                    территория, благоустроенные дороги, детские и спортивные площадки. Очень радует
+                                    близость к лесу и чистый воздух.
+                                </div>
+                            </div>
+                            <div className="basis-1/4">
+                                <div className="flex flex-row items-center justify-center">
+                                    <img
+                                        src="https://flowbite.com/docs/images/people/profile-picture-4.jpg"
+                                        className="rounded-full w-16 h-16"
+                                        alt=""
+                                    />
+                                    <div className="items-center h-full ml-6">Мария К.</div>
+                                </div>
+                                <div className="text-justify mt-2 indent-8">
+                                    Недавно приобрели дом в коттеджном посёлке, и впечатления от покупки исключительно
+                                    положительные. Во-первых, сама атмосфера поселка — это тишина, природа и ощущение
+                                    уюта вдали от городской суеты. Инфраструктура продумана до мелочей: охраняемая
+                                    территория, благоустроенные дороги, детские и спортивные площадки. Очень радует
+                                    близость к лесу и чистый воздух.
+                                </div>
+                            </div>
+                            <div className="basis-1/4">
+                                <div className="flex flex-row items-center justify-center">
+                                    <img
+                                        src="https://flowbite.com/docs/images/people/profile-picture-4.jpg"
+                                        className="rounded-full w-16 h-16"
+                                        alt=""
+                                    />
+                                    <div className="items-center h-full ml-6">Мария К.</div>
+                                </div>
+                                <div className="text-justify mt-2 indent-8">
+                                    Недавно приобрели дом в коттеджном посёлке, и впечатления от покупки исключительно
+                                    положительные. Во-первых, сама атмосфера поселка — это тишина, природа и ощущение
+                                    уюта вдали от городской суеты. Инфраструктура продумана до мелочей: охраняемая
+                                    территория, благоустроенные дороги, детские и спортивные площадки. Очень радует
+                                    близость к лесу и чистый воздух.
+                                </div>
+                            </div>
+                            <div className="basis-1/4">
+                                <div className="flex flex-row items-center justify-center">
+                                    <img
+                                        src="https://flowbite.com/docs/images/people/profile-picture-4.jpg"
+                                        className="rounded-full w-16 h-16"
+                                        alt=""
+                                    />
+                                    <div className="items-center h-full ml-6">Мария К.</div>
+                                </div>
+                                <div className="text-justify mt-2 indent-8">
+                                    Недавно приобрели дом в коттеджном посёлке, и впечатления от покупки исключительно
+                                    положительные. Во-первых, сама атмосфера поселка — это тишина, природа и ощущение
+                                    уюта вдали от городской суеты. Инфраструктура продумана до мелочей: охраняемая
+                                    территория, благоустроенные дороги, детские и спортивные площадки. Очень радует
+                                    близость к лесу и чистый воздух.
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex flex-row space-x-8">
+                            <div className="basis-1/4">
+                                <iframe
+                                    height={634}
+                                    src="https://www.youtube.com/embed/PlGytGTE0iQ"
+                                    title="Самое Романтичное Видео ❤️"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerPolicy="strict-origin-when-cross-origin"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
+                            <div className="basis-1/4">
+                                <iframe
+                                    height={634}
+                                    src="https://www.youtube.com/embed/PlGytGTE0iQ"
+                                    title="Самое Романтичное Видео ❤️"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerPolicy="strict-origin-when-cross-origin"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
+                            <div className="basis-1/4">
+                                <iframe
+                                    height={634}
+                                    src="https://www.youtube.com/embed/PlGytGTE0iQ"
+                                    title="Самое Романтичное Видео ❤️"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerPolicy="strict-origin-when-cross-origin"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
+                            <div className="basis-1/4">
+                                <iframe
+                                    height={634}
+                                    src="https://www.youtube.com/embed/PlGytGTE0iQ"
+                                    title="Самое Романтичное Видео ❤️"
+                                    frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerPolicy="strict-origin-when-cross-origin"
+                                    allowFullScreen
+                                ></iframe>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

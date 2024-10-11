@@ -71,6 +71,7 @@ const App: React.FC = () => {
                     </div>
                 </div>
             </section>
+            <Btn className="fixed right-0 bottom-28 z-50" theme="green" onClick={() => setModal(true)}>Обратный звонок</Btn>
         </div>
     );
 };

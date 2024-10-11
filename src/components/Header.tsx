@@ -23,7 +23,7 @@ const Header:React.FC<headerProps> = ({ setModal }) => {
         <header className={`absolute ${menu ? 'z-20' : 'z-[2]'} left-0 top-0 w-full pt-3 pb-[15px]`}>
             <div className="container flex items-center justify-between">
                 <Link to={'/'}>
-                    <img src={IMG.headerLogo} alt="" className="w-[114px] lg:w-[250px] xl:w-auto" />
+                    <img src={IMG.headerLogo} alt="" className="w-[114px] lg:w-[250px] xl:w-auto ml-10" />
                 </Link>
                 <div className="flex flex-col items-end gap-[15px]">
                     <ul className="hidden lg:flex items-center gap-6 xl:gap-10 text-lg leading-[23px]">

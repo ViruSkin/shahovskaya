@@ -33,6 +33,7 @@ import telegramDark from './telegram-dark.svg';
 import instagramDark from './instagram-dark.svg';
 import facebookDark from './facebook-dark.svg';
 import whatsappDark from './whatsapp-dark.svg';
+import gas from './gas.svg';
 
 const IMG = {
     headerLogo,
@@ -70,6 +71,7 @@ const IMG = {
     instagramDark,
     facebookDark,
     whatsappDark,
+    gas
 }
 
 export default IMG;
